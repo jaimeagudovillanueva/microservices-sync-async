@@ -1,0 +1,11 @@
+spring:
+  application:
+   name: films
+  data:
+    mongodb:
+      uri: mongodb+srv://films:zkCv1gkRvFn6fD8n@cluster0.jvxtb.mongodb.net/microservices-films?retryWrites=true&w=majority
+server:
+  port: ${PORT:0}
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
