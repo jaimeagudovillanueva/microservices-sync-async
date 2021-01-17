@@ -1,6 +1,6 @@
 spring:
   application:
-   name: films
+   name: films-service
   data:
     mongodb:
       uri: mongodb+srv://films:zkCv1gkRvFn6fD8n@cluster0.jvxtb.mongodb.net/microservices-films?retryWrites=true&w=majority

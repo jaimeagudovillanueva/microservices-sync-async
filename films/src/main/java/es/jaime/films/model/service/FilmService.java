@@ -22,7 +22,29 @@ public class FilmService implements IFilmService {
 
     @Override
     @Transactional(readOnly = true)
-    public Film findById(final Long id) {
+    public Film findById(final String id) {
         return filmRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    @Transactional
+    public Film save(Film film) {
+        return filmRepository.save(film);
+    }
+
+    @Override
+    @Transactional
+    public Film update(Film film, String filmId) {
+        Film filmToUpdate = findById(filmId);
+        filmToUpdate.setDescription(film.getDescription());
+        filmToUpdate.setGenre(film.getGenre());
+        filmToUpdate.setTitle(film.getTitle());
+        return save(filmToUpdate);
+    }
+
+    @Override
+    @Transactional
+    public void delete(String filmId) {
+        filmRepository.deleteById(filmId);
     }
 }

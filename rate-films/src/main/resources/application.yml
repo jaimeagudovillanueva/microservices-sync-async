@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: rate-films
+  cloud:
+    stream:
+      bindings:
+        output:
+          destination: film_scores
+      kafka:
+        binder:
+          brokers: 127.0.0.1
+          defaultBrokerPort: 9092
+          replication-factor: 1
+server:
+  port: ${PORT:0}
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

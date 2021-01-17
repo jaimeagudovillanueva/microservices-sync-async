@@ -7,6 +7,8 @@ import java.util.List;
 public interface IFilmService {
 
     List<Film> findAll();
-
-    Film findById(Long id);
+    Film findById(String id);
+    Film save(Film film);
+    Film update(Film film, String filmId);
+    void delete(String filmId);
 }
