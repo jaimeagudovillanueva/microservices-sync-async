@@ -12,6 +12,7 @@
         <module name="config-server" />
         <module name="hystrix-dashboard" />
         <module name="eureka-server" />
+        <module name="films-score-stream" />
         <module name="Users" />
         <module name="rate-films" />
       </profile>
@@ -20,6 +21,7 @@
       <module name="config-server" target="11" />
       <module name="eureka-server" target="11" />
       <module name="films" target="11" />
+      <module name="films-score-stream" target="11" />
       <module name="gateway-service" target="11" />
       <module name="hystrix-dashboard" target="11" />
       <module name="rate-films" target="11" />
@@ -32,6 +34,7 @@
       <module name="config-server" options="-parameters" />
       <module name="eureka-server" options="-parameters" />
       <module name="films" options="-parameters" />
+      <module name="films-score-stream" options="-parameters" />
       <module name="gateway-service" options="-parameters" />
       <module name="hystrix-dashboard" options="-parameters" />
       <module name="rate-films" options="-parameters" />

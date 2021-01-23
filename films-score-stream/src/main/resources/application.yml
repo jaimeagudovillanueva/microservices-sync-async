@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: film-score-stream
+  cloud.stream:
+    function:
+      definition: filmScoresProcessor
+    bindings:
+      filmScoresProcessor-in-0:
+        destination: film_scores
+      filmScoresProcessor-out-0:
+        destination: best_films
+    kafka:
+      binder:
+        brokers: 127.0.0.1
+        defaultBrokerPort: 9092
+        replication-factor: 1

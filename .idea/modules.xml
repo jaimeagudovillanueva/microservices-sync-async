@@ -7,6 +7,7 @@
       <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
       <module fileurl="file://$PROJECT_DIR$/films/films.iml" filepath="$PROJECT_DIR$/films/films.iml" />
+      <module fileurl="file://$PROJECT_DIR$/films-score-stream/films-score-stream.iml" filepath="$PROJECT_DIR$/films-score-stream/films-score-stream.iml" />
       <module fileurl="file://$PROJECT_DIR$/gateway-service/gateway-service.iml" filepath="$PROJECT_DIR$/gateway-service/gateway-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" filepath="$PROJECT_DIR$/hystrix-dashboard/hystrix-dashboard.iml" />
       <module fileurl="file://$PROJECT_DIR$/rate-films/rate-films.iml" filepath="$PROJECT_DIR$/rate-films/rate-films.iml" />
