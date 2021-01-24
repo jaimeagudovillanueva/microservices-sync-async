@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: best-films-consumer
+  cloud.stream:
+    function:
+      definition: goodFilmsProcessor
+    bindings:
+      goodFilmsProcessor-in-0:
+        destination: best_films
+    default:
+      group: '${spring.application.name}'
+    kafka:
+      binder:
+        brokers: 127.0.0.1
+        defaultBrokerPort: 9092
+        replication-factor: 1
+server:
+  port: ${PORT:0}
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}

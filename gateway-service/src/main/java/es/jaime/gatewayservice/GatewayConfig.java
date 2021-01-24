@@ -1,10 +1,12 @@
 package es.jaime.gatewayservice;
 
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.reactive.function.client.WebClient;
 
 @EnableHystrix
 @Configuration
@@ -30,5 +32,11 @@ public class GatewayConfig {
                         .uri("lb://rate-films/ratefilmfeign")
                         .id("ratefilm-route-feign"))
                 .build();
+    }
+
+    @Bean
+    @LoadBalanced
+    public WebClient.Builder loadBalancedWebClientBuilder() {
+        return WebClient.builder();
     }
 }

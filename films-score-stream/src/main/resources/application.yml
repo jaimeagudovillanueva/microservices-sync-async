@@ -7,6 +7,7 @@ spring:
     bindings:
       filmScoresProcessor-in-0:
         destination: film_scores
+        group: '${spring.application.name}'
       filmScoresProcessor-out-0:
         destination: best_films
     kafka:
